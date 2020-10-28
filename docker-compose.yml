@@ -1,0 +1,27 @@
+version: "3.8"
+
+services: 
+    app:
+        build: .
+        restart: always
+        depends_on: 
+            - postgres
+        volumes:
+            - .:/usr/src/app
+        networks:
+            - app_network
+        ports:
+            - "8080:8080"
+    postgres:
+        image: postgres:11
+        restart: always
+        networks:
+            - app_network
+        ports:
+            - "5432:5432"
+        environment: 
+            - POSTGRES_PASSWORD=db_admin
+            - POSTGRES_USER=db_admin
+            - POSTGRES_DB=intercorp-retail
+networks: 
+    app_network:
