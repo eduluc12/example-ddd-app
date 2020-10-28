@@ -14,13 +14,17 @@
   "license": "ISC",
   "repository": {},
   "dependencies": {
-    "@google-cloud/functions-framework": "^1.7.1"
+    "@google-cloud/functions-framework": "^1.7.1",
+    "pg": "^8.4.2"
   },
   "devDependencies": {
     "@tsconfig/node12": "^1.0.7",
     "@types/express": "^4.17.8",
+    "@types/jest": "^26.0.15",
+    "@types/pg": "^7.14.5",
     "db-migrate": "^0.11.11",
     "jest": "^26.6.1",
+    "ts-jest": "^26.4.3",
     "tsc-watch": "^4.2.9",
     "typescript": "^4.0.5"
   }
