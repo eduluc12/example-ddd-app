@@ -1,6 +1,6 @@
 import { Client } from 'pg';
-import { User } from '../Domain/User';
-import { UserRepository } from '../Domain/UserRepository';
+import { User } from '../domain/User';
+import { UserRepository } from '../../../domain/contracts/UserRepository';
 
 export class UserPostgresRepository implements UserRepository {
 
